@@ -1,0 +1,47 @@
+.footer {
+    background-color: #22272d;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    //clip-path: polygon(50% 25%, 100% 0%, 100% 100%, 0 100%, 0 0%);
+    margin-top: -12%;
+    
+
+    &__logo-box {
+       
+        margin-bottom: 8rem;
+    }
+
+    &__logo {
+        width: 8rem;
+        height: auto;
+        @include respond(tab-port){
+            width: 30rem;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-social-link;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-white-gold;
+           
+        }
+    }
+
+    &__text {
+        &--name{
+            color: $color-rose-gold;
+            text-transform: uppercase;
+        }
+    }
+
+    @include social_links;
+}

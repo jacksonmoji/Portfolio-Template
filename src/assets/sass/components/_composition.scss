@@ -1,0 +1,80 @@
+.composition {
+   
+    &__photo {
+
+        filter: drop-shadow(0 .5rem .5rem rgba(0, 0, 0, .9));
+        //box-shadow: 0 1.5rem 1rem rgba( #000000, .4);
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 2rem;   
+        //clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+        // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        // clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        //clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 41% 75%, 17% 99%, 26% 75%, 0% 75%);
+
+        &--p1 { 
+            width:50%;
+            top: 5rem;
+            margin-left: 20%;
+            padding: 10%;
+
+            @include respond(tab-port){
+                width:100%;
+                width:50%;
+                top: 5rem;
+                margin-left: 20%;
+            }
+        }
+
+        &--p2 {
+    
+            right: 10%;
+            top: 10rem;
+        }
+
+        &--p3 {
+        
+            left: 40%;
+            top: 0rem;
+        }
+
+        &:hover {
+            //transform: scale(1.25);
+            z-index: 20;
+        } 
+   
+    }
+    // &:hover &__photo:not(:hover) {
+    //     transform: scale(1.05);
+
+    // }
+
+    @include social_links;
+
+    &__social {
+        margin-top: 5rem;
+        text-align: center;
+        font-size: 2rem;
+   
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s ease-in;
+        }
+
+        &:hover,
+        &:active {
+            // filter: drop-shadow(0 .2rem .2rem rgba(0, 0, 0, .9));
+            transform: translateY(-.7rem);
+        }
+    }
+
+    
+}
+

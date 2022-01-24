@@ -1,0 +1,54 @@
+.file {
+    perspective: 150rem; 
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    @include respond(tab-port){
+        height: 25rem;
+    }
+
+    &__side {
+        height: 50rem;
+      
+        transition: all 1s ease-in-out;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        backface-visibility: hidden; //hides the backside of an image 
+
+        &--front {
+            background-color: transparent;
+            img {
+                width: 100%;
+            }
+            
+        }
+    
+        &--back {
+            transform: rotateX(180deg);
+            top:15%;
+            left:38%;
+        }
+
+        @include respond(tab-port){
+            height: 25rem;
+        }
+    
+    }
+
+  
+    &:hover &__side--front {
+        // transform: rotateX(180deg);
+        transform: rotateX(-180deg)
+        
+    }
+
+    &:hover &__side--back {
+        transform: rotateX(0); 
+    }
+}
+
+//.file:hover .file__side {

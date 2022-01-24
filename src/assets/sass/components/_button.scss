@@ -1,0 +1,119 @@
+
+.btn {
+
+    &:link,  
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 1.5rem;
+        margin: auto 1rem;
+        display: inline-block;
+        border-radius: .5rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+        
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem $color-hover-backdrop;
+
+
+        &::after {
+            transform: scale(.5); /* doubles in size */
+            opacity: 0;
+        }
+
+
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem $color-hover-backdrop;
+    }
+
+    &__bicolor {
+
+        &--antiquewhite {
+
+            background-color: $color-white-gold;
+            color: $color-logo-background;
+    
+            &::after {
+                background-color: $color-white-gold;
+            }
+        }
+
+        &--dark {
+
+            background-color: $color-logo-background;
+            color: $color-white-gold;
+    
+            &::after {
+                background-color: $color-logo-background;
+            }
+        }
+
+
+    }
+
+    &--blue {
+       
+        // rgba(130, 94, 38, 0.9), rgba(102, 142, 271, 0.9)
+        background-color: $color-rose-gold;
+        color: $color-primary;
+        margin: 2rem;
+
+  
+
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: .5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveUp 1.5s ease-out .80s;
+        animation-fill-mode: backwards; /* innit */
+    }  
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition: all .3s;
+
+    }
+
+    &:active {
+        background-color: $color-white-gold;
+        color: $color-logo-background;
+        box-shadow: 0 1rem 2rem rgba( $color-hover-backdrop, .15);
+        transform: translateY(0);
+    }
+
+    &:hover {
+        background-color: $color-white-gold;
+        box-shadow: 0 .5rem 1rem rgba( $color-hover-backdrop, .15);
+        transform: translateY(-2px);
+        border-bottom: none;
+        border-radius: .5rem;
+    }
+}

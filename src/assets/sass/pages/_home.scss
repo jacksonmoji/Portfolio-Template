@@ -1,0 +1,50 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 10rem 0;
+   
+    z-index: 8;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+
+.section-education {
+    padding: 10rem 0;
+    text-align: center;
+}
+
+.section-experience {
+    padding: 10rem 0;
+    background-color: $color-grey-light-1;
+}
+
+.section-tools { 
+    padding: 15rem 0 ;
+    background-image: linear-gradient(
+		to right bottom,
+		$color-primary-light,
+        $color-primary-dark),
+    url(./assets/img/bg-5.png);
+    background-size: cover; /* makes sure that the background image is responsive to window size changes */
+    //background-position: bottom; /
+    
+    //clip-path: polygon(50% 0%, 100% -5%, 100% 75%, 50% 100%, 0% 75%, 0% -5%);
+    z-index: 20;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+
+}
+
+.section-projects {
+    background-color: $color-grey-light-1;
+    padding: 15rem 0 ;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+   
+}

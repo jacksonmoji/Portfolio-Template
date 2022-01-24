@@ -1,0 +1,34 @@
+.header {
+	height: 100vh; 
+	background-image: linear-gradient(
+		to right bottom,
+		$color-primary-light,
+		$color-primary-dark),
+	url(./assets/img/bg-7.png);
+	background-size: cover; /* makes sure that the background image is responsive to window size changes */
+	background-position: bottom; /* makes sure that image top stays static with changes in window */
+	position: relative;
+	//clip-path: polygon(100% 0, 100% 0%, 100% 75vh, 50% 100%, 0% 75vh, 0% 85%, 0 0);
+
+  
+    &__logo-box {
+        position: absolute;
+        top:3.5rem;
+        left:3.5rem;
+
+        @include respond(tab-port) {
+            top:1.5rem;
+            left:1.5rem;
+        }
+    }
+
+    &__logo {
+        height: 10rem;
+    }
+   
+    &__text-box {
+        @include center_elements;
+    }
+}
+
+
