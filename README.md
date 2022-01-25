@@ -4,7 +4,7 @@ This is a Personal Portfolio free template. I welcome anyone interested to clone
 
 ## Tech Stack 🛠
 
- - React
+ - React JS
  - Sass
  - CSS
  - Docker
